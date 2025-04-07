@@ -710,7 +710,7 @@ footer {
 /* Highlighted card (first one) */
 .solution-card:hover {
   background: #ec1f24;
-background: linear-gradient(180deg, rgba(151,222,255,1) 0%, rgba(0,148,218,1) 46%, rgba(0,129,189,1) 100%);
+/* background: linear-gradient(180deg, rgba(151,222,255,1) 0%, rgba(0,148,218,1) 46%, rgba(0,129,189,1) 100%); */
   color: white;
 }
 
