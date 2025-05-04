@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TEI</title>
+  <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/responsive.css">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header id="mainHeader">
+    <div class="logo"><a href="index.html"><img src="./assets/images/logo.png" alt=""></a></div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <i id="menuIcon" class="fas fa-bars"></i>
+    </div>
+    <nav id="navMenu">
+      <ul class="nav-links" id="navLinks">
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="mission-vision.html">Vision & Mission</a></li>
+        <!-- <li>
+                  <a href="about.html" class="submenu-toggle" onclick="toggleSubmenu(event)">About Us</a>
+                  <ul class="submenu">
+                      <li><a href="#">Our Team</a></li>
+                      <li><a class="active" href="mission-vision.html">Vision & Mission</a></li>
+                  </ul>
+              </li> 
+              <li>
+                  <a href="#" class="submenu-toggle" onclick="toggleSubmenu(event)">Industries Served</a>
+                  <ul class="submenu">
+                      <li><a href="#">Branding</a></li>
+                      <li><a href="#">Digital Marketing</a></li>
+                  </ul>
+              </li>-->
+        <li><a href="service.html">Products</a></li>
+        <!-- <li><a href="#">Case Studies</a></li> -->
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="tel:9999123456">
+          <div align="center">
+            <div class="btn-container">
+                <button class="pulse-button">
+                  9999-123456<br>
+                  <i>Consultation 24/7</i>
+                  <span></span></button>
+            </div>
+            </div>
+          </a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- MAIN -->
+  <div class="carousel">
+    <div class="carousel-track" id="carouselTrack">
+      <div class="carousel-slide"
+        style="background-image: url('https://www.tozen.com/wp-content/themes/tozen_global/assets/img/top/mv_slide01.webp');">
+        <div class="content">
+          <h1>The Best Move You<br>Will Ever Make</h1>
+          <p>Recently cut out of an illustrated magazine and housed in a nice, gilded frame.<br>It showed a
+            lady fitted out with a fur hat and fur boa</p>
+          <div class="btn-group">
+            <a href="#" class="btn primary">OUR SERVICES</a>
+            <a href="#" class="btn secondary">MORE ABOUT US</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-slide"
+        style="background-image: url('https://www.tozen.com/wp-content/themes/tozen_global/assets/img/top/mv_slide02.webp');">
+        <div class="content">
+          <h1>Your Future Starts<br>With Us</h1>
+          <p>Empowering industries with sustainable energy and engineering excellence.</p>
+          <div class="btn-group">
+            <a href="#" class="btn primary">OUR SERVICES</a>
+            <a href="#" class="btn secondary">MORE ABOUT US</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-slide"
+        style="background-image: url('https://www.tozen.com/wp-content/themes/tozen_global/assets/img/top/mv_slide05.webp');">
+        <div class="content">
+          <h1>Innovation Meets<br>Precision</h1>
+          <p>Cutting-edge technology and world-class infrastructure solutions.</p>
+          <div class="btn-group">
+            <a href="#" class="btn primary">OUR SERVICES</a>
+            <a href="#" class="btn secondary">MORE ABOUT US</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="arrow left" onclick="prevSlide()"><i class="fa-solid fa-arrow-left"></i></button>
+    <button class="arrow right" onclick="nextSlide()"><i class="fa-solid fa-arrow-right"></i></button>
+  </div>
+  <div class="container">
+    <!-- who we are -->
+    <section data-aos="fade-up" class="about-energy">
+      <div class="container">
+        <div class="content-area">
+          <div class="text-section animate-on-scroll fade-up">
+            <small>Who We Are</small>
+            <h2>Providing affordable and reliable energy</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
+              ullamcorper mattis, pulvinar dapibus leo.</p>
+
+            <ul class="checklist">
+              <li>Clean energy for a bright future</li>
+              <li>Sustainable development</li>
+              <li>Improving access to energy</li>
+            </ul>
+
+            <div class="badge-section">
+              <div class="badge">
+                <i class="fa-solid fa-award"></i>
+                <p>We're No.1 Oil &<br> Gas Company</p>
+              </div>
+              <a href="#" class="read-more-btn">READ MORE</a>
+            </div>
+          </div>
+
+          <div class="image-section animate-on-scroll fade-right">
+            <img
+              src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Oil Plant" />
+            <button class="play-button" id="openVideo">&#9658;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Modal Popup -->
+    <div class="video-modal" id="videoModal">
+      <div class="video-wrapper">
+        <span class="close-btn" id="closeVideo">&times;</span>
+        <!-- <iframe id="videoFrame" width="100%" height="100%"
+                    src="https://youtu.be/8of5w7RgcTc?si=KoRdBGKDmrkPA00e" frameborder="0"
+                    allowfullscreen></iframe> -->
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/umsrQSA2iOM?si=rKtwPIzHjUI_aL5Z"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <!-- ṣervices -->
+    <section class="solutions-section" data-aos="fade-right">
+      <h2 class="title">Powerful solutions for a sustainable future</h2>
+      <p class="description">
+        Ultricies purus commodo arcu pellentesque sapien. Porta platea efficitur neque inceptos natoque curabitur.
+        Suspendisse montes torquent luctus sagittis blandit nisi cubilia. Libero mattis nibh consequat class nunc.
+      </p>
+
+      <div class="solutions-grid">
+        <!-- Card -->
+        <div class="solution-card animate-on-scroll">
+          <div class="icon-wrapper">
+            <img src="./assets/images/oil-refinery_2942052.png" alt="Petroleum Refinery" />
+          </div>
+          <h3>Petroleum Refinery</h3>
+          <p>Duis cras facilisis euismod habitasse interdum. Pretium est vehicula risus phasellus pharetra sodales.</p>
+          <div class="arrow-box">
+            <span>&#8599;</span>
+          </div>
+        </div>
+
+        <!-- Card -->
+        <div data-aos="fade-up" data-aos-delay="60" class="solution-card animate-on-scroll">
+          <div class="icon-wrapper">
+            <img src="./assets/images/thermal.png" alt="Thermal Power" />
+          </div>
+          <h3>Thermal Power</h3>
+          <p>Duis cras facilisis euismod habitasse interdum. Pretium est vehicula risus phasellus pharetra sodales.</p>
+          <div class="arrow-box">
+            <span>&#8599;</span>
+          </div>
+        </div>
+
+        <!-- Repeat -->
+        <div data-aos="fade-up" data-aos-delay="80" class="solution-card animate-on-scroll">
+          <div class="icon-wrapper">
+            <img src="./assets/images/cnc machine.png" alt="Gas Flaring" />
+          </div>
+          <h3>Gas Flaring</h3>
+          <p>Duis cras facilisis euismod habitasse interdum. Pretium est vehicula risus phasellus pharetra sodales.</p>
+          <div class="arrow-box">
+            <span>&#8599;</span>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="100" class="solution-card animate-on-scroll">
+          <div class="icon-wrapper">
+            <img src="./assets/images/oil-refinery_2942052.png" alt="Oil Pump" />
+          </div>
+          <h3>Oil Pump</h3>
+          <p>Duis cras facilisis euismod habitasse interdum. Pretium est vehicula risus phasellus pharetra sodales.</p>
+          <div class="arrow-box">
+            <span>&#8599;</span>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="120" class="solution-card animate-on-scroll">
+          <div class="icon-wrapper">
+            <img src="./assets/images/mechanical.png" alt="Chemical Factory" />
+          </div>
+          <h3>Chemical Factory</h3>
+          <p>Duis cras facilisis euismod habitasse interdum. Pretium est vehicula risus phasellus pharetra sodales.</p>
+          <div class="arrow-box">
+            <span>&#8599;</span>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="140" class="solution-card animate-on-scroll">
+          <div class="icon-wrapper">
+            <img src="./assets/images/thermal.png" alt="Methane Elimination" />
+          </div>
+          <h3>Methane Elimination</h3>
+          <p>Duis cras facilisis euismod habitasse interdum. Pretium est vehicula risus phasellus pharetra sodales.</p>
+          <div class="arrow-box">
+            <span>&#8599;</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- details -->
+    <section class="workshop-section">
+      <h2 data-aos="fade-up" class="title">CNC Milling Machines</h2>
+      <p data-aos="fade-up" data-aos-delay="100" class="description">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit doloremque inventore tenetur blanditiis fugit
+        laboriosam praesentium, quae at, sapiente officia assumenda quibusdam nesciunt commodi, debitis quo.
+      </p>
+
+      <div class="container">
+        <div class="tabs">
+          <div class="tab-list">
+            <div class="tab-item active" data-tab="0">CNC Milling Machines</div>
+            <div class="tab-item" data-tab="1">CNC Lathe Machines</div>
+            <div class="tab-item" data-tab="2">ISO 9001 Certified Factory</div>
+            <div class="tab-item" data-tab="3">Quality Testing Equipment</div>
+          </div>
+
+          <div class="tab-content-wrapper">
+
+            <div data-aos="fade-left" class="tab-content active">
+              <h2>Modern Machining Workshop</h2>
+              Our CNC milling machines excel at creating complex parts with multiple features. They can produce
+              intricate contours, precise holes, and slots on various materials. With multi-axis capabilities, these
+              machines offer versatility in creating both simple and complex 3D forms, ensuring high accuracy for
+              prototyping and production runs.
+              <ul class="tab-content-list">
+                <li>3-, 4-, and 5-Axis CNC Machining</li>
+                <li>50+ Materials of Your Choice</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, maxime!</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+              </ul>
+            </div>
+
+            <div data-aos="fade-left" class="tab-content">
+              <h2>Advanced CNC Lathe Technology</h2>
+              <p>Our CNC lathe machines provide precise shaping and cutting capabilities, perfect for custom production
+                and repeated precision manufacturing.</p>
+              <p>They help reduce waste, optimize time, and enhance the final product quality through programmable
+                automation.</p>
+            </div>
+
+            <div data-aos="fade-left" class="tab-content">
+              <h2>ISO 9001 Certified Facility</h2>
+              <p>Our facility operates under the ISO 9001 certification, ensuring consistent quality standards,
+                structured processes, and continual improvement practices.</p>
+              <p>This certification stands as proof of our commitment to quality and customer satisfaction.</p>
+            </div>
+
+            <div data-aos="fade-left" class="tab-content">
+              <h2>Precision Quality Testing Equipment</h2>
+              <p>We use state-of-the-art quality testing equipment to verify every detail in your production line.</p>
+              <p>Accuracy and reliability are key aspects of our quality assurance process ensuring the best results
+                every time.</p>
+            </div>
+          </div>
+
+          <div class="tab-image-wrapper">
+            <img data-aos="flip-right" data-aos-delay="150" class="tab-image active"
+              src="https://images.unsplash.com/photo-1588011930968-eadac80e6a5a?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="CNC Milling" />
+            <img data-aos="flip-right" class="tab-image"
+              src="https://images.unsplash.com/photo-1718824331840-399943ff5c1e?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Lathe Machines" />
+            <img data-aos="flip-right" class="tab-image"
+              src="https://images.unsplash.com/photo-1565866926760-213f0b57e8b6?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="ISO Certified" />
+            <img data-aos="flip-right" class="tab-image"
+              src="https://images.unsplash.com/photo-1573453358610-f0118a07ab00?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Quality Testing" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- certification -->
+    <!-- <div class="container">
+      <div class="cert-wrapper">
+        <div class="cert-wrapper-left">
+          <div>
+            <h2>CERTIFICATIONS & AUTHORIZATIONS</h2>
+            <p class="description">
+              Because we are a transparent company, which puts price on quality, we show you a series of certificates
+              obtained
+            </p>
+          </div>
+          <div class="thumbnail-carousel" id="thumbs">
+            <img src="./assets/certificate/GST CERTIFICATE_page-0001.jpg" data-cert="ISO 14001-2004-RO-18.10-2017"
+              class="active" />
+            <img src="./assets/certificate/GST CERTIFICATE_page-0002.jpg" data-cert="ISO 9001-2015-IN-21.05-2019" />
+            <img src="./assets/certificate/GST CERTIFICATE_page-0003.jpg" data-cert="Govt Approval No. 224/2017" />
+          </div>
+        </div>
+
+
+        <div class="preview-area">
+          <img id="preview" src="./assets/certificate/GST CERTIFICATE_page-0001.jpg" />
+          <div class="cert-code" id="certCode">ISO 14001-2004-RO-18.10-2017</div>
+          <div class="arrows">
+            <div class="arrow-btn" id="prev">&#8249;</div>
+            <div class="arrow-btn red" id="next">&#8250;</div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- Global Brands -->
+    <div class="who-we-are">
+      <h2 data-aos="fade-up">GLOBAL BRANDS. LOCAL ACCESS. UNMATCHED VALUE.</h2>
+      <p data-aos="fade-up">At TEI, we take pride in making the world’s most trusted industrial brands accessible
+          to businesses across the globe. With strong partnerships across continents and years of experience in
+          the industry, we specialize in sourcing and supplying premium-grade valves, pumps, and control solutions
+          tailored to your specific needs.</p>
+      <p data-aos="fade-up">Whether you're seeking performance, precision, or long-term reliability — we’ve got
+          you covered with a curated portfolio of international leaders in fluid control and process equipment.
+      </p>
+  </div>
+
+  <!-- Brands we work for -->
+    <section class="brands-section">
+      <h2 data-aos="fade-up">Brands We Work For</h2>
+      <div class="brands-grid">
+        <div data-aos="fade-up" class="brand-logo"><img src="./assets/images/brands/spirax-sarco.png" alt="Spirax Sarco" title="Spirax Sarco" /></div>
+        <div data-aos="fade-up" class="brand-logo"><img src="./assets/images/brands/ksb.svg" alt="KSB" title="KSB" /></div>
+        <div data-aos="fade-up" class="brand-logo"><img src="./assets/images/brands/ebro_Logo.png" alt="EBRO" title="EBRO" /></div>
+        <div data-aos="fade-up" class="brand-logo"><img src="./assets/images/brands/ARI.png" alt="ARI" /></div>
+        <div data-aos="fade-up" class="brand-logo"><img src="./assets/images/brands/GEA-Logo.svg" alt="GEA" /></div>
+        <div data-aos="fade-up" class="brand-logo"><img src="./assets/images/brands/Armstrong.svg" alt="Armstrong" title="Armstrong" /></div>
+        <div data-aos="fade-up" class="brand-logo"><img src="./assets/images/brands/Watson-McDaniel.png" alt="Mark / Danny / Watson McDaniel" title="Mark / Danny / Watson McDaniel" /></div>
+        <div data-aos="fade-up" class="brand-logo"><img src="./assets/images/brands/Watts.jpg" alt="Watts" title="Watts" /></div>
+        <div data-aos="fade-up" class="brand-logo"><img src="./assets/images/brands/honeywell-logo.svg" alt="honeywell" title="honeywell" /></div>
+        <div data-aos="fade-up" class="brand-logo"><img src="./assets/images/brands/Bermad-logo-new.webp" alt="BERMAD" title="BERMAD" /></div>
+        <div data-aos="fade-up" class="brand-logo"><img src="./assets/images/brands/DOROT-logo.png" alt="DOROT" title="DOROT" /></div>
+        <div data-aos="fade-up" class="brand-logo"><img src="./assets/images/brands/Baccara-logo.svg" alt="Baccara" title="Baccara" /></div>
+        <div data-aos="fade-up" class="brand-logo"><img src="./assets/images/brands/Kitz.svg" alt="KITZ" title="KITZ" /></div>
+        <div data-aos="fade-up" class="brand-logo"><img src="./assets/images/brands/YOSHITAKE.png" alt="YOSHITAKE" title="YOSHITAKE" /></div>
+        <div data-aos="fade-up" class="brand-logo"><img src="./assets/images/brands/tozen.svg" alt="tozen" title="tozen" /></div>
+        <div data-aos="fade-up" class="brand-logo"><img src="./assets/images/brands/HITACHI.png" alt="HITACHI" title="HITACHI" /></div>
+        <div data-aos="fade-up" class="brand-logo"><img src="./assets/images/brands/MIYAWAKI_logo.png" alt="MIYAWAKI" title="MIYAWAKI" /></div>
+        <div data-aos="fade-up" class="brand-logo"><img src="./assets/images/brands/JetStream_logo_web.webp" alt="JetStream" title="JetStream" /></div>
+        <div data-aos="fade-up" class="brand-logo"><img src="./assets/images/brands/AVK-LOGO.png" alt="AVK" title="AVK" /></div>
+        <div data-aos="fade-up" class="brand-logo"><img src="./assets/images/brands/VYC.png" alt="VYC" title="VYC" /></div>
+        <div data-aos="fade-up" class="brand-logo"><img src="./assets/images/brands/definox-logo.webp" alt="Definox" title="Definox" /></div>
+      </div>
+    </section>
+  <h2 class="brand-specitize" data-aos="fade-up">BRANDS WE SPECIALIZE IN</h2>
+
+  <div class="core-values-section about-values-section">
+
+      <div data-aos="fade-up" data-aos-delay="30" class="value">
+          <h2>🇬🇧 United Kingdom</h2>
+          <!-- <div class="brands-grid">
+            <div data-aos="fade-up" class="brand-logo"><img src="./assets/images/brands/spirax-sarco.png" alt="Spirax Sarco" title="Spirax Sarco — Steam solutions engineered for excellence." /></div>
+          </div> -->
+          <p><strong>Spirax Sarco</strong> — Steam solutions engineered for excellence.</p>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="30" class="value">
+          <h2>🇩🇪 Germany</h2>
+          <!-- <div class="brands-grid">
+            <div data-aos="fade-up" class="brand-logo"><img src="./assets/images/brands/ksb.svg" alt="KSB" title="KSB – High-performance pump and valve systems" /></div>
+            <div data-aos="fade-up" class="brand-logo"><img src="./assets/images/brands/ebro_Logo.png" alt="EBRO" title="EBRO - Advanced valve and automation technology" /></div>
+            <div data-aos="fade-up" class="brand-logo"><img src="./assets/images/brands/ARI.png" alt="ARI-Armaturen – Industrial valves made with German precision" title="ARI-Armaturen – Industrial valves made with German precision" /></div>
+            <div data-aos="fade-up" class="brand-logo"><img src="./assets/images/brands/GEA-Logo.svg" alt="GEA" title="GEA – Process engineering and heat transfer specialists" /></div>
+          </div> -->
+          <p><strong>KSB</strong> – High-performance pump and valve systems</p>
+          <p><strong>EBRO</strong> – Advanced valve and automation technology</p>
+          <p><strong>ARI-Armaturen</strong> – Industrial valves made with German precision</p>
+          <p><strong>GEA</strong> – Process engineering and heat transfer specialists</p>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="30" class="value">
+          <h2>🇺🇸 United States</h2>
+          <p><strong>Armstrong </strong> – Efficient flow control and heat transfer solutions</p>
+          <p><strong>Mark / Danny / Watson McDaniel</strong> – Reliable steam and fluid regulation</p>
+          <p><strong>Watts </strong> – Water safety, flow, and HVAC excellence</p>
+          <p><strong>Honeywell </strong> – Global leader in automation and control</p>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="30" class="value">
+          <h2>🇮🇱 Israe</h2>
+          <p><strong>BERMAD </strong> – Smart water control management</p>
+          <p><strong>DOROT </strong> – Advanced control valves for water and irrigation</p>
+          <p><strong>BACCARA </strong> – Precise solutions in automation and fluid control</p>
+      </div>
+      
+      <div data-aos="fade-up" data-aos-delay="30" class="value">
+          <h2>🇯🇵 Japan</h2>
+          <p><strong>OKM, KITZ (KITAZAWA) </strong> – World-class valves for critical systems</p>
+          <p><strong>YOSHITAKE </strong> – Steam and pressure control expertise</p>
+          <p><strong>TOZEN (TOCHEN)</strong> – High-performance expansion joints and valves</p>
+          <p><strong>HITACHI </strong> – Reliable engineering for industrial processes</p>
+          <p><strong>TLV, MIYAWAKI, VENN, TOMOE</strong> – Specialized steam and fluid solutions</p>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="30" class="value">
+          <h2>🇹🇼 Taiwan</h2>
+          <p><strong>FS Toyama, Jetstream, DSC, 317</strong> — Efficient flow systems</p>
+          <p><strong>SS Mud Relief Valve</strong> — Proven protection for demanding environments</p>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="30" class="value">
+          <h2>🇩🇰 Denmark</h2>
+          <p><strong>AVK</strong> — Durable valves for water, gas, and fire protection</p>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="30" class="value">
+          <h2>🇪🇸 Spain</h2>
+          <p><strong>VYC </strong> — Industrial valve technology trusted worldwide</p>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="30" class="value">
+          <h2>🇫🇷 France</h2>
+          <p><strong>DEFINOX (De Vinos)</strong> — Hygienic valves and equipment for food and pharma</p>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="30" class="value">
+          <h2>🇰🇷 South Korea</h2>
+          <p><strong>Tisen, Asahikwang (JK), Rotork</strong> — Modern automation and valve control systems</p>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="30" class="value">
+          <h2>🌍 Additional Trusted Brands</h2>
+          <p><strong>GALA Gere, Warco, Vortex Control</strong> — Niche solutions for complex flow and control applications</p>
+      </div>
+
+  </div>
+
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <div class="logo-footer"><img src="./assets/images/logo.png" alt=""></div>
+        <h2>THERMAL ENERGY INTERNATIONAL</h2>
+        <h4>About</h4>
+        <ul>
+          <li>Thermal Energy International (TEI) has been a trusted partner for industries like steel mills, power plants, cement plants, and chemical plants, providing high-quality mechanical, electrical, and automation solutions.
+          </li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Contact</h4>
+        <ul>
+          <li>Email: info@tei.com</li>
+          <li>Phone: +91 12345 67890</li>
+          <li>Location: Mumbai, India</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 TEI. All rights reserved.
+    </div>
+  </footer>
+
+  <div class="scroll-container">
+    <button id="scroll-to-top-btn" class="scroll-to-top-btn" title="Move to top">
+      <div id="scroll-progress" class="scroll-progress"></div>
+      <span><i class="fa-solid fa-arrow-up"></i></span>
+    </button>
+  </div>
+
+  <!-- SCRIPT -->
+  <script src="./assets/js/script.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/product.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header id="mainHeader">
+        <div class="logo"><a href="index.html"><img src="./assets/images/logo.png" alt=""></a></div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i id="menuIcon" class="fas fa-bars"></i>
+        </div>
+        <nav id="navMenu">
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="mission-vision.html">Vision & Mission</a></li>
+                <!-- <li>
+                    <a href="about.html" class="submenu-toggle" onclick="toggleSubmenu(event)">About Us</a>
+                    <ul class="submenu">
+                        <li><a href="#">Our Team</a></li>
+                        <li><a class="active" href="mission-vision.html">Vision & Mission</a></li>
+                    </ul>
+                </li> 
+                <li>
+                    <a href="#" class="submenu-toggle" onclick="toggleSubmenu(event)">Industries Served</a>
+                    <ul class="submenu">
+                        <li><a href="#">Branding</a></li>
+                        <li><a href="#">Digital Marketing</a></li>
+                    </ul>
+                </li>-->
+                <li><a class="active" href="service.html">Products</a></li>
+                <!-- <li><a href="#">Case Studies</a></li> -->
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="tel:9999123456">
+                    <div align="center">
+                      <div class="btn-container">
+                          <button class="pulse-button">
+                            9999-123456<br>
+                            <i>Consultation 24/7</i>
+                            <span></span></button>
+                      </div>
+                      </div>
+                    </a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="container shop-container">
+        <aside class="sidebar">
+          <select class="category-select" onchange="filterCategory(this.value)">
+            <option value="all">All Categories</option>
+            <!-- <option value="services">Services</option> -->
+            <option value="electric">Electric Valve Actuator</option>
+            <option value="power">Power Station Valve</option>
+            <option value="electronics">Electronics</option>
+          </select>
+    
+          <h3>All Category</h3>
+          <ul id="categoryList">
+            <li data-category="all" onclick="filterCategory('all')">All</li>
+            <!-- <li data-category="services" onclick="filterCategory('services')">Services</li> -->
+            <li data-category="electric" onclick="filterCategory('electric')">Electric Valve Actuator</li>
+            <li data-category="power" onclick="filterCategory('power')">Power Station Valve</li>
+            <li data-category="electronics" onclick="filterCategory('electronics')">Electronics</li>
+          </ul>
+        </aside>
+    
+        <div class="products">
+          <h2 id="categoryTitle">All Products</h2>
+          <div id="productGrid"></div>
+        </div>
+      </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <div class="logo-footer"><img src="./assets/images/logo.png" alt=""></div>
+                <h2>THERMAL ENERGY INTERNATIONAL</h2>
+                <h4>About</h4>
+                <ul>
+                    <li>Thermal Energy International (TEI) has been a trusted partner for industries like steel mills,
+                        power plants, cement plants, and chemical plants, providing high-quality mechanical, electrical,
+                        and automation solutions.
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <ul>
+                    <li>Email: info@constrique.com</li>
+                    <li>Phone: +91 12345 67890</li>
+                    <li>Location: Gurugram, India</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2025 TEI. All rights reserved.
+        </div>
+    </footer>
+
+    <div class="scroll-container">
+        <button id="scroll-to-top-btn" class="scroll-to-top-btn">
+            <div id="scroll-progress" class="scroll-progress"></div>
+            <span><i class="fa-solid fa-arrow-up"></i></span>
+        </button>
+    </div>
+
+    <!-- SCRIPT -->
+    <script src="./assets/js/product.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>
